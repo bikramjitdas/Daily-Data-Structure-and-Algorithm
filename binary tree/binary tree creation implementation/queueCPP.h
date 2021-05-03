@@ -1,34 +1,43 @@
+//include this as header file
+//this is going to be the background for the tree
 #include<stdio.h>
 #include<iostream>
 using namespace std;
+class Node
+{
+	//class to create the left and right child of a tree
+public:
+	Node *leftchild;
+	int data;
+	Node *rightchild;
+
+};
 class Queue {
 private:
 	int front, rear;
 	int data;
 	int size;
-	int *Q;
+	Node **Q;
 public:
 	Queue() {
 
 		front = rear = -1;
 		size = 10;
-		Q = new int[size];
+		Q = new Node*[size];
 	}
 	Queue(int size)
 	{
 		front = rear = -1;
 		this->size = size;
-		Q = new int[this->size];
+		Q = new Node*[this->size];
 	}
-	void enque(int x);
-	int deque();
-	int isEmpty() {
-		front == rear;
-	}
+	void enque(Node* x);
+	int isEmpty() { return front == rear; }
+	Node* deque();
 	//void display();
 };
 
-void Queue::enque( int x)
+void Queue::enque( Node* x)
 {
 	if (rear == size - 1)
 	{
@@ -41,9 +50,9 @@ void Queue::enque( int x)
 		cout << Q[rear] << endl;
 	}
 }
-int Queue::deque()
+Node* Queue::deque()
 {
-	int temp = -1;
+	Node* temp = NULL;
 	if (front == rear)
 	{
 		cout << "Queue is empty\n";

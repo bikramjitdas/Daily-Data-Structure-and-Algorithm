@@ -1,0 +1,13 @@
+Enter the size of the queue
+10
+20
+30
+40
+50
+Queue is full
+Deleted element is:10
+Deleted element is:20
+Deleted element is:30
+Deleted element is:40
+Deleted element is:50
+Queue is empty

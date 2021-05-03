@@ -1,38 +1,57 @@
-#include<bits/stdc++.h>
+#include<bits/stdc++.h>c#include"queueCPP.h"
 using namespace std;
-class Node
+class Tree
 {
-	//class to create the left and right child of a tree
-public:
-	Node *leftchild;
-	int data;
-	Node *rightchild;
+	    = -Node * root; \
 
-}
-class Queue
+public:      //w`900-/
+	Tree() {root = NULL;}
+	void Treecreation();
+	void preorder();
+	void postorder();
+	void Inorder();
+};
+void Tree::Treecreation()
 {
-private:
-	int size;
-	int front, rear;
-	Node **Q;
-	Queue()
+	Node *p, *t;
+	int x;
+	Queue q(100);
+
+
+	cout << "Enter the root value of the tree\n";
+	cin >> x;
+	root = new Node;
+	root->data = x;
+	root->leftchild = root->rightchild = NULL;
+	q.enque(root);
+	while (!q.isEmpty())
 	{
-		size = 10;
-		front = rear = -1;
-		Q = new Node*[size];
+		p = q.deque();
+		cout << "Enter the leftchild of " << p->data << endl;
+		cin >> x;
+		if (x != -1)
+		{
+			t = new Node;
+			t->data = x;
+			t->leftchild = t->rightchild = NULL;
+			p->leftchild = t;
+			q.enque(t);
+		}
+		cout << "Enter the rightchild of " << p->data << endl;
+		cin >> x;
+		if (x != -1)
+		{
+			t = new Node;
+			t->data = x;
+			t->leftchild = t->rightchild = NULL;
+			p->rightchild = t;
+			q.enque(t);
+		}
 	}
-	Queue(int size)
-	{
-		this->size = size;
-		front = rear = -1;
-		Q = new Node*[this->size];
-	}
-	void enque(Node* x);
-	Node *deque();
-	void display();
 }
-
-Queue::void enque()
+}
+int main()
 {
-
+	Tree t;
+	t.Treecreation();
 }

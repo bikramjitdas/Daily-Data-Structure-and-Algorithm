@@ -1,0 +1,33 @@
+Enter the number of jobs 
+Enter the job:
+Enter the deadline:
+Enter the profit:
+Enter the job:
+Enter the deadline:
+Enter the profit:
+Enter the job:
+Enter the deadline:
+Enter the profit:
+Enter the job:
+Enter the deadline:
+Enter the profit:
+Enter the job:
+Enter the deadline:
+Enter the profit:
+So the jobs are
+ Jobs	 deadline	 profit	
+------------------------------------------------
+1	2	20
+2	2	15
+3	1	10
+4	3	5
+5	3	1
+Hence Your Job Sequencing Order is:
+2	 time 0
+1	 time 1
+4	 time 2
+Maxprofit:15
+Maxprofit:35
+Maxprofit:40
+Here's Your Profit Dear
+40
