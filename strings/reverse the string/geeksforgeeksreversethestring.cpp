@@ -1,3 +1,4 @@
+//Reverse the string using stack
 #include<iostream>
 #include<stack>
 #include<cstring>
